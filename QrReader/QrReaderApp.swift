@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct QrReaderApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
+  @StateObject private var scannerModel = QrViewModel()
+  
+  var body: some Scene {
+    WindowGroup {
+      ScannedCodesList()
+        .environmentObject(scannerModel)
     }
+  }
 }

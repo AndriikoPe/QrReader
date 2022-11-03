@@ -8,17 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		BF0ADA1F2914228000688E4D /* QrReaderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0ADA1E2914228000688E4D /* QrReaderApp.swift */; };
-		BF0ADA212914228000688E4D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0ADA202914228000688E4D /* ContentView.swift */; };
+		BF0ADA212914228000688E4D /* ScannerCodesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0ADA202914228000688E4D /* ScannerCodesList.swift */; };
 		BF0ADA232914228400688E4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF0ADA222914228400688E4D /* Assets.xcassets */; };
 		BF0ADA262914228400688E4D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF0ADA252914228400688E4D /* Preview Assets.xcassets */; };
+		BF0ADA2D2914229D00688E4D /* QrViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0ADA2C2914229D00688E4D /* QrViewModel.swift */; };
+		BF6C5FB2291428E4009F1ADF /* QrCodeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6C5FB1291428E4009F1ADF /* QrCodeModel.swift */; };
+		BF6C5FB52914292D009F1ADF /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = BF6C5FB42914292D009F1ADF /* CodeScanner */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BF0ADA1B2914228000688E4D /* QrReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QrReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF0ADA1E2914228000688E4D /* QrReaderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrReaderApp.swift; sourceTree = "<group>"; };
-		BF0ADA202914228000688E4D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BF0ADA202914228000688E4D /* ScannerCodesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerCodesList.swift; sourceTree = "<group>"; };
 		BF0ADA222914228400688E4D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF0ADA252914228400688E4D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BF0ADA2C2914229D00688E4D /* QrViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrViewModel.swift; sourceTree = "<group>"; };
+		BF6C5FB1291428E4009F1ADF /* QrCodeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QrCodeModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF6C5FB52914292D009F1ADF /* CodeScanner in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,7 +58,9 @@
 			isa = PBXGroup;
 			children = (
 				BF0ADA1E2914228000688E4D /* QrReaderApp.swift */,
-				BF0ADA202914228000688E4D /* ContentView.swift */,
+				BF0ADA332914288200688E4D /* Views */,
+				BF0ADA342914288800688E4D /* ViewModels */,
+				BF0ADA352914289000688E4D /* Models */,
 				BF0ADA222914228400688E4D /* Assets.xcassets */,
 				BF0ADA242914228400688E4D /* Preview Content */,
 			);
@@ -65,6 +73,30 @@
 				BF0ADA252914228400688E4D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BF0ADA332914288200688E4D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BF0ADA202914228000688E4D /* ScannerCodesList.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BF0ADA342914288800688E4D /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				BF0ADA2C2914229D00688E4D /* QrViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		BF0ADA352914289000688E4D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BF6C5FB1291428E4009F1ADF /* QrCodeModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +115,9 @@
 			dependencies = (
 			);
 			name = QrReader;
+			packageProductDependencies = (
+				BF6C5FB42914292D009F1ADF /* CodeScanner */,
+			);
 			productName = QrReader;
 			productReference = BF0ADA1B2914228000688E4D /* QrReader.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +146,9 @@
 				Base,
 			);
 			mainGroup = BF0ADA122914228000688E4D;
+			packageReferences = (
+				BF6C5FB32914292D009F1ADF /* XCRemoteSwiftPackageReference "CodeScanner" */,
+			);
 			productRefGroup = BF0ADA1C2914228000688E4D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +175,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF0ADA212914228000688E4D /* ContentView.swift in Sources */,
+				BF0ADA2D2914229D00688E4D /* QrViewModel.swift in Sources */,
+				BF0ADA212914228000688E4D /* ScannerCodesList.swift in Sources */,
 				BF0ADA1F2914228000688E4D /* QrReaderApp.swift in Sources */,
+				BF6C5FB2291428E4009F1ADF /* QrCodeModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +310,7 @@
 				DEVELOPMENT_TEAM = 9VD63Y2NJT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Need to scan qr code.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,6 +340,7 @@
 				DEVELOPMENT_TEAM = 9VD63Y2NJT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Need to scan qr code.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -339,6 +381,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BF6C5FB32914292D009F1ADF /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twostraws/CodeScanner";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BF6C5FB42914292D009F1ADF /* CodeScanner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BF6C5FB32914292D009F1ADF /* XCRemoteSwiftPackageReference "CodeScanner" */;
+			productName = CodeScanner;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BF0ADA132914228000688E4D /* Project object */;
 }
